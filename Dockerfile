@@ -1,0 +1,7 @@
+FROM rails:onbuild
+
+ENV DB_USER postgres
+ENV DB_PASSWORD password
+ENV DB_NAME hello
+ENV DB_ADAPTER postgres
+ENV DATABASE_URL ${DB_ADAPTER}://${DB_USER}:${DB_PASSWORD}@db/${DB_NAME}
